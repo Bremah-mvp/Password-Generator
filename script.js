@@ -47,6 +47,10 @@ let passwordLength = document.getElementById("passLength").value;
 // initializing display variable.
 const passwordEl = document.getElementById("passwordDisplay");
 
+// initializing variable to help hide/display copy button
+const copyButton = document.getElementById("copyButton");
+
+
 function passwordGenerator() {
   let userPassword = [];
   // This loop will build the password
@@ -71,9 +75,13 @@ function displayPasswordResults() {
     passwordEl.innerHTML = "!- Select at least one character set -!";
     return;
   }
+  //print the password to the screen.
+  passwordEl.classList.remove('alert');
+  copyButton.classList.remove('hideButton');
+  passwordEl.innerHTML = password;
+}
 
 function copyPassword() {
   passwordEl.select();
   document.execCommand("copy");
 }
-

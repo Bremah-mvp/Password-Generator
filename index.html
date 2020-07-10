@@ -36,8 +36,8 @@
                             <br />
 
                             <div class="character-selector pt-3">
-                                <h3>Choose character sets.</h3>
-                            
+                                <h3> character sets.</h3>
+
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="charType0">
                                     <label class="form-check-label">
@@ -72,22 +72,31 @@
                             </div>
 
                             <div class="copy-box">
-                                <textarea readonly class="form-control" id="passwordDisplay" rows="4" placeholder="Your Secure Password"
-                                  aria-label="Generated Password"></textarea>
-                                
-                              </div>
-                            <br />
-                            <button id="passwordgeneratorbutton" class="btn btn-primary btn-sm ">generate</button>
-                            <button id="button" class="btn btn-primary btn-sm">copy to clipboard</button>
-                            <div id="length-Display">
+                                <textarea readonly class="form-control" id="passwordDisplay" rows="4"
+                                    placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
 
                             </div>
-                        </div>
-                    </div>
+                            <div class="card-body">
 
+                                <div>
+                                    <h3>Choose password length.</h3>
+                                    
+                                    <input type="range" id="passLength" min="8" max="128"
+                                        oninput="genPassLength()"><span id="lengthDisplay">68</span>
+                                </div>
+
+                                <br />
+                                <button id="passwordGeneratorButton" class="btn btn-primary btn-sm ">generate</button>
+                                <button id="button" class="btn btn-primary btn-sm">copy to clipboard</button>
+                                <div id="length-Display">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-        </div>
+            
 
 
 
@@ -104,7 +113,9 @@
             </div>
             </main>
 
-            <script src="script.js"></script>    
+
+
+            <script src="./script.js"></script>
 
 </body>
 
