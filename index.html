@@ -71,18 +71,15 @@
 
                             </div>
 
-                            <div>
-                                <input type="text" id="display">
-                                <br />
-                                <h3>Choose password length.</h3>
-
-                                <input type="range" id="passLength" min="8" max="128" oninput="genPassLength()"><span
-                                    id="lengthDisplay">25</span>
-                            </div>
+                            <div class="copy-box">
+                                <textarea readonly class="form-control" id="passwordDisplay" rows="4" placeholder="Your Secure Password"
+                                  aria-label="Generated Password"></textarea>
+                                
+                              </div>
                             <br />
                             <button id="passwordgeneratorbutton" class="btn btn-primary btn-sm ">generate</button>
                             <button id="button" class="btn btn-primary btn-sm">copy to clipboard</button>
-                            <div id="lengthDisplay">
+                            <div id="length-Display">
 
                             </div>
                         </div>
@@ -106,7 +103,7 @@
             </div>
             </main>
 
-            <script src="./script.js"></script>
+            <script src="script.js"></script>    
 
 </body>
 
