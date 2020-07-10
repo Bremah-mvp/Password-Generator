@@ -72,12 +72,6 @@ function displayPasswordResults() {
     return;
   }
 
-  //print the password to the screen.
-  passwordEl.classList.remove('alert');
-  copyButton.classList.remove('hideButton');
-  passwordEl.innerHTML = password;
-}
-
 function copyPassword() {
   passwordEl.select();
   document.execCommand("copy");
