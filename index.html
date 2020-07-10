@@ -10,101 +10,103 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    
-
 
 </head>
 
 <body class="bg-secondary">
 
-    
-        <nav class="navbar navbar-light bg-primary text-center">
-            <a class="navbar-brand">Password Generator</a>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder=" favourite words" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </nav>
 
-        <br />
-        <div class="container">
+    <nav class="navbar navbar-light bg-primary text-center">
+        <a class="navbar-brand">Password Generator</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder=" favourite words" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
 
-            <div class="row">
-                <div class="card bg-dark text-secondary p-2" style="width: 75rem;">
-                    <div class="card-body">
-                        <div class="col-lg-8 col-sm-12 mx-auto">
-                            <div class="content">
-                                <h1>Generate favourite Password</h1>
-                                <br />
+    <br />
+    <div class="container">
 
-                                <div class="character-selector pt-3">
-                                    <h3>Choose character sets.</h3>
+        <div class="row">
+            <div class="card bg-dark text-secondary p-2" style="width: 75rem;">
+                <div class="card-body">
+                    <div class="col-lg-8 col-sm-12 mx-auto">
+                        <div class="content">
+                            <h1>Generate favourite Password</h1>
+                            <br />
 
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="charType0">
-                                        <label class="form-check-label">
-                                            Upper case
-                                        </label>
-                                    </div>
+                            <div class="character-selector pt-3">
+                                <h3>Choose character sets.</h3>
 
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="charType1">
-                                        <label class="form-check-label">
-                                            Lower case
-                                        </label>
-                                    </div>
-
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="charType2">
-                                        <label class="form-check-label">
-                                            Numbers
-                                        </label>
-                                    </div>
-
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="charType3">
-                                        <label class="form-check-label">
-                                            Special Characters
-                                        </label>
-                                    </div>
-
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="charType0">
+                                    <label class="form-check-label">
+                                        Upper case
+                                    </label>
                                 </div>
 
 
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="charType1">
+                                    <label class="form-check-label">
+                                        Lower case
+                                    </label>
+                                </div>
+
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="charType2">
+                                    <label class="form-check-label">
+                                        Numbers
+                                    </label>
+                                </div>
+
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="charType3">
+                                    <label class="form-check-label">
+                                        Special Characters
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div>
                                 <input type="text" id="display">
                                 <br />
-                                <input type="range" min="8" max="129" name="slider" id="slider">
-                                <br />
-                                <button type="button" class="btn btn-primary btn-sm generate">generate</button>
-                                <button type="button" class="btn btn-primary btn-sm">copy to clipboard</button>
-                                <div id="length">
+                                <h3>Choose password length.</h3>
 
-                                </div>
+                                <input type="range" id="passLength" min="8" max="128" oninput="genPassLength()"><span
+                                    id="lengthDisplay">25</span>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-                <div class="card" style="width: 75rem;">
-                    <div class="card-body">
-                        <div class="previous passwords">
-                            <h3>Saved passwords</h3>
                             <br />
-                            <div id="lastNums">
+                            <button id="passwordgeneratorbutton" class="btn btn-primary btn-sm ">generate</button>
+                            <button id="button" class="btn btn-primary btn-sm">copy to clipboard</button>
+                            <div id="lengthDisplay">
 
                             </div>
                         </div>
                     </div>
-                </div>
-    </main>
 
-    <script src="app.js"></script>
+                </div>
+            </div>
+
+
+
+            <div class="card" style="width: 75rem;">
+                <div class="card-body">
+                    <div class="previous passwords">
+                        <h3>Saved passwords</h3>
+                        <br />
+                        <div id="lastNums">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </main>
+
+            <script src="./script.js"></script>
 
 </body>
 
