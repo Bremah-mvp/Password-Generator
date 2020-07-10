@@ -15,30 +15,33 @@
 
 <body class="bg-secondary">
 
+    <main>
+        <nav class="navbar navbar-light bg-primary text-center">
+            <a class="navbar-brand text-light">Password Generator</a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder=" favourite words" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 bg-secondary text-light"
+                    type="submit">Search</button>
+            </form>
+        </nav>
 
-    <nav class="navbar navbar-light bg-primary text-center">
-        <a class="navbar-brand">Password Generator</a>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder=" favourite words" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </nav>
+        <br />
+        <div class="container">
 
-    <br />
-    <div class="container">
+            <div class="row">
+                <div class="card bg-dark text-secondary p-2" style="width: 75rem;">
+                    <div class="card-body">
+                        <div class="col-lg-8 col-sm-12 mx-auto">
+                            <div class="content">
+                                <h1>Generate favourite Password</h1>
+                            </div>
 
-        <div class="row">
-            <div class="card bg-dark text-secondary p-2" style="width: 75rem;">
-                <div class="card-body">
-                    <div class="col-lg-8 col-sm-12 mx-auto">
-                        <div class="content">
-                            <h1>Generate favourite Password</h1>
-                            <br />
 
-                            <div class="character-selector pt-3">
+
+                            <div class="character-selector pt-3 text-light">
                                 <h3> character sets.</h3>
 
-                                <div class="form-check">
+                                <div class="form-check text-light">
                                     <input class="form-check-input" type="checkbox" id="charType0">
                                     <label class="form-check-label">
                                         Upper case
@@ -46,7 +49,7 @@
                                 </div>
 
 
-                                <div class="form-check">
+                                <div class="form-check text-light">
                                     <input class="form-check-input" type="checkbox" id="charType1">
                                     <label class="form-check-label">
                                         Lower case
@@ -54,7 +57,7 @@
                                 </div>
 
 
-                                <div class="form-check">
+                                <div class="form-check text-light">
                                     <input class="form-check-input" type="checkbox" id="charType2">
                                     <label class="form-check-label">
                                         Numbers
@@ -62,7 +65,7 @@
                                 </div>
 
 
-                                <div class="form-check">
+                                <div class="form-check text-light">
                                     <input class="form-check-input" type="checkbox" id="charType3">
                                     <label class="form-check-label">
                                         Special Characters
@@ -78,44 +81,44 @@
                             </div>
                             <div class="card-body">
 
-                                <div>
+                                <div class="text-light">
                                     <h3>Choose password length.</h3>
-                                    
+
                                     <input type="range" id="passLength" min="8" max="128"
                                         oninput="genPassLength()"><span id="lengthDisplay">68</span>
                                 </div>
 
                                 <br />
-                                <button id="passwordGeneratorButton" class="btn btn-primary btn-sm ">generate</button>
-                                <button id="button" class="btn btn-primary btn-sm">copy to clipboard</button>
-                                <div id="length-Display">
+                                <button id="passwordGeneratorButton" class="btn btn-primary btn-m ">Generate
+                                    Password</button>
+                                <button title="Copy password" onclick="copyPassword()" id="copyButton"
+                                    class="btn btn-primary btn-m">copy to clipboard</button>
 
-                                </div>
+
                             </div>
                         </div>
-
                     </div>
+
                 </div>
-            
+            </div>
+        </div>
 
+        <div class="card" style="width: 75rem;">
+            <div class="card-body">
+                <div class="previous passwords">
+                    <h3>Saved passwords</h3>
+                    <br />
+                    <div id="lastNums">
 
-
-            <div class="card" style="width: 75rem;">
-                <div class="card-body">
-                    <div class="previous passwords">
-                        <h3>Saved passwords</h3>
-                        <br />
-                        <div id="lastNums">
-
-                        </div>
                     </div>
                 </div>
             </div>
-            </main>
+        </div>
+    </main>
 
 
 
-            <script src="./script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 

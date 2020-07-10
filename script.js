@@ -1,12 +1,13 @@
 // setting values
-const lowerCaseString = "abcdefghijklmnopqrstuvwxyz";
 const upperCaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCaseString = "abcdefghijklmnopqrstuvwxyz";
 const numericString = "1234567890";
 const specialCharString = `!"#$%&'(\`)*+,-./:;<=>?@[\\]^_{|}~`;
 
 // converting values to arrays
-const lowerCaseArray = lowerCaseString.split("");
 const upperCaseArray = upperCaseString.split("");
+const lowerCaseArray = lowerCaseString.split("");
+
 const numericArray = numericString.split("");
 const specialCharArray = specialCharString.split("");
 
@@ -21,10 +22,10 @@ function genCharArray() {
  
   passwordArray = [];
   if (document.getElementById("charType0").checked) {
-    passwordArray = passwordArray.concat(lowerCaseArray);
+    passwordArray = passwordArray.concat(upperCaseArray);
       }
   if (document.getElementById("charType1").checked) {
-    passwordArray = passwordArray.concat(upperCaseArray);
+    passwordArray = passwordArray.concat(lowerCaseArray);
   }
   if (document.getElementById("charType2").checked) {
     passwordArray = passwordArray.concat(numericArray);
@@ -72,7 +73,7 @@ function displayPasswordResults() {
   // dealing with display of "undefined" when no character set is chosen/
   if (passwordArray.length === 0) {
     passwordEl.classList.add('alert');
-    passwordEl.innerHTML = "!- Select at least one character set -!";
+    passwordEl.innerHTML = "! no character set selected !";
     return;
   }
   //print the password to the screen.
@@ -80,6 +81,7 @@ function displayPasswordResults() {
   copyButton.classList.remove('hideButton');
   passwordEl.innerHTML = password;
 }
+
 
 function copyPassword() {
   passwordEl.select();
