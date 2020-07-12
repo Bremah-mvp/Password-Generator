@@ -1,17 +1,17 @@
-// setting values
+// declaring the values we are going to use
 const upperCaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCaseString = "abcdefghijklmnopqrstuvwxyz";
 const numericString = "1234567890";
 const specialCharString = `!"#$%&'(\`)*+,-./:;<=>?@[\\]^_{|}~`;
 
-// converting values to arrays
+// changing the values to arrays
 const upperCaseArray = upperCaseString.split("");
 const lowerCaseArray = lowerCaseString.split("");
 
 const numericArray = numericString.split("");
 const specialCharArray = specialCharString.split("");
 
-// Activating the button
+// setting up the button
 let generateBtn = document.querySelector("#passwordGeneratorButton");
 
 generateBtn.addEventListener('click', genCharArray);
@@ -36,52 +36,47 @@ function genCharArray() {
   displayPasswordResults();
 }
 
-// Live feedback display for user selected password length.
+//  password length declared
 function genPassLength() {
   passwordLength = document.getElementById("passLength").value;
   document.getElementById("lengthDisplay").innerHTML = " " + passwordLength;
 }
 
-// Retrieving the password length.
+// password length retrieved
 let passwordLength = document.getElementById("passLength").value;
 
-// initializing display variable.
+
 const passwordEl = document.getElementById("passwordDisplay");
 
-// initializing variable to help hide/display copy button
-const copyButton = document.getElementById("copyButton");
 
 
 function passwordGenerator() {
   let userPassword = [];
-  // This loop will build the password
+  // build password loop will execute here
   for (i = 0; i < passwordLength; i++) {
 
     let randomIndex = Math.floor(Math.random() * passwordArray.length);
     let passwordChar = passwordArray[randomIndex];
 
-    // add characters to userPassword
-    userPassword.push(passwordChar);
+   userPassword.push(passwordChar);
   }
   return userPassword.join("");
 }
 
-// Display the password
+// password will be displayed
 function displayPasswordResults() {
   const password = passwordGenerator();
 
-  // dealing with display of "undefined" when no character set is chosen/
-  if (passwordArray.length === 0) {
+ if (passwordArray.length === 0) {
     passwordEl.classList.add('alert');
     passwordEl.innerHTML = "! no character set selected !";
     return;
   }
-  //print the password to the screen.
+  // password will be printed
   passwordEl.classList.remove('alert');
   copyButton.classList.remove('hideButton');
   passwordEl.innerHTML = password;
 }
-
 
 function copyPassword() {
   passwordEl.select();

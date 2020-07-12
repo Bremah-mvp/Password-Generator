@@ -1,16 +1,18 @@
+/* styling applied to the content class */
 .content {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: lightgrey;
+    background-color:lightgrey;
     padding: 30px;
     width: 100%;
 }
-
+ /* the display width will be 100% */
 #display {
 
   width: 100%; 
 }
 
+/* slider width set set */
 #slider {
 
     width: 100%;
@@ -18,6 +20,8 @@
 .h3 {
     color: linen;
 }
+
+/* navbar attributes */
 .navbar-brand{
     font-weight: bolder;
     font-size: xx-large;
