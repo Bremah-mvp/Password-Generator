@@ -30,3 +30,6 @@ message remind the user to select a character set.
 Users can then hit the copy to clipboard button to copy the password to the clip board.
 
 Users can then go on to transfer their copied password to their designated use.
+HERES a link to the deployed app: https://bremah-mvp.github.io/Password-Generator/
+below is a screen shot of the app
+![picture](
