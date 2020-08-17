@@ -32,4 +32,4 @@ Users can then hit the copy to clipboard button to copy the password to the clip
 Users can then go on to transfer their copied password to their designated use.
 HERES a link to the deployed app: https://bremah-mvp.github.io/Password-Generator/
 below is a screen shot of the app
-![picture](
+![picture](https://github.com/Bremah-mvp/Password-Generator/blob/master/Annotation%202020-08-16%20234149.png)
